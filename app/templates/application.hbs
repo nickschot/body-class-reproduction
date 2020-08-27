@@ -1,5 +1,7 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+{{#if this.isOpen}}
+  {{set-body-class "is-open"}}
+{{/if}}
+
+<button type="button" {{on "click" this.toggle}}>Toggle</button>
 
 {{outlet}}
